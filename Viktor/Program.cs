@@ -49,7 +49,7 @@ namespace Viktor
             Menu Combo = spellMenu.AddSubMenu(new Menu("Combo", "Combo"));
             Menu Focus = spellMenu.AddSubMenu(new Menu("Focus Selected", "Focus Selected"));
             Menu KS = spellMenu.AddSubMenu(new Menu("KillSteal", "KillSteal"));
-            Menu drawing = spellmenu.AddSubMenu(new Menu("drawing", "drawing"));
+            Menu drawingg = spellMenu.AddSubMenu(new Menu("drawing", "drawing"));
             Harass.AddItem(new MenuItem("Use Q Harass", "Use Q Harass").SetValue(true));
             Harass.AddItem(new MenuItem("Use E Harass", "Use E Harass").SetValue(true));
             Combo.AddItem(new MenuItem("Use Q Combo", "Use Q Combo").SetValue(true));
