@@ -64,8 +64,8 @@ namespace Viktor
             drawingg.AddItem(new MenuItem("apollo.viktor.draw.cd", "Draw on CD").SetValue(new Circle(false, Color.DarkRed)));
                 MenuItem drawComboDamageMenu = new MenuItem("apollo.viktor.draw.ind.bool", "Draw Combo Damage", true).SetValue(true);
                 MenuItem drawFill = new MenuItem("apollo.viktor.draw.ind.fill", "Draw Combo Damage Fill", true).SetValue(new Circle(true, Color.FromArgb(90, 255, 169, 4)));
-                draw.AddItem(drawComboDamageMenu);
-                draw.AddItem(drawFill);
+                drawingg.AddItem(drawComboDamageMenu);
+                drawingg.AddItem(drawFill);
                 DamageIndicator.DamageToUnit = Damages.ComboDmg;
                 DamageIndicator.Enabled = drawComboDamageMenu.GetValue<bool>();
                 DamageIndicator.Fill = drawFill.GetValue<Circle>().Active;
