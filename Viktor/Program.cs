@@ -61,26 +61,7 @@ namespace Viktor
             KS.AddItem(new MenuItem("Use E KillSteal", "Use E KillSteal").SetValue(true));
             KS.AddItem(new MenuItem("Use R KillSteal", "Use R KillSteal").SetValue(true));
             spellMenu.AddItem(new MenuItem("Use R Follow", "Use R Follow").SetValue(true));
-            drawing.Additem(new MenuItem("apollo.viktor.draw.cd", "Draw on CD").SetValue(new Circle(false, Color.DarkRed)));
-                MenuItem drawComboDamageMenu = new MenuItem("apollo.viktor.draw.ind.bool", "Draw Combo Damage", true).SetValue(true);
-                MenuItem drawFill = new MenuItem("apollo.viktor.draw.ind.fill", "Draw Combo Damage Fill", true).SetValue(new Circle(true, Color.FromArgb(90, 255, 169, 4)));
-                draw.AddItem(drawComboDamageMenu);
-                draw.AddItem(drawFill);
-                DamageIndicator.DamageToUnit = Damages.ComboDmg;
-                DamageIndicator.Enabled = drawComboDamageMenu.GetValue<bool>();
-                DamageIndicator.Fill = drawFill.GetValue<Circle>().Active;
-                DamageIndicator.FillColor = drawFill.GetValue<Circle>().Color;
-                drawComboDamageMenu.ValueChanged +=
-                    delegate(object sender, OnValueChangeEventArgs eventArgs)
-                    {
-                        DamageIndicator.Enabled = eventArgs.GetNewValue<bool>();
-                    };
-                drawFill.ValueChanged +=
-                    delegate(object sender, OnValueChangeEventArgs eventArgs)
-                    {
-                        DamageIndicator.Fill = eventArgs.GetNewValue<Circle>().Active;
-                        DamageIndicator.FillColor = eventArgs.GetNewValue<Circle>().Color;
-                    }; 
+             
 
             _menu.AddToMainMenu();
 
